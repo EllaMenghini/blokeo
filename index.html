@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Licenciatura en Educación – UNSAM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Licenciatura en Educación</h1>
+  <h2>Universidad Nacional de San Martín</h2>
+
+  <div class="stats">
+    <div>Promedio: <span id="promedio">–</span></div>
+    <div>Avance de la carrera: <span id="avance">0%</span></div>
+    <div class="progress-bar">
+      <div id="progress-fill"></div>
+    </div>
+  </div>
+</header>
+
+<main class="malla">
+
+  <!-- ================= AÑO 1 ================= -->
+  <section class="anio">
+    <h3>Año 1</h3>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre I</h4>
+
+      <div class="materia" id="historia-general" data-creditos="6" data-correlativas="">
+        <span class="codigo">1</span>
+        <span class="nombre">Historia General</span>
+      </div>
+
+      <div class="materia" id="intro-filosofia" data-creditos="4" data-correlativas="">
+        <span class="codigo">2</span>
+        <span class="nombre">Introducción a la Filosofía</span>
+      </div>
+
+      <div class="materia" id="epistemologia" data-creditos="4" data-correlativas="">
+        <span class="codigo">3</span>
+        <span class="nombre">Epistemología de las Ciencias Sociales</span>
+      </div>
+    </div>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre II</h4>
+
+      <div class="materia" id="intro-politica" data-creditos="4" data-correlativas="">
+        <span class="codigo">4</span>
+        <span class="nombre">Introducción a la Ciencia Política</span>
+      </div>
+
+      <div class="materia" id="pedagogia-1" data-creditos="4" data-correlativas="">
+        <span class="codigo">5</span>
+        <span class="nombre">Pedagogía I</span>
+      </div>
+
+      <div class="materia" id="intro-sociologia" data-creditos="4" data-correlativas="">
+        <span class="codigo">6</span>
+        <span class="nombre">Introducción a la Sociología</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AÑO 2 ================= -->
+  <section class="anio">
+    <h3>Año 2</h3>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre III</h4>
+
+      <div class="materia" id="organizaciones" data-creditos="4" data-correlativas="">
+        <span class="codigo">7</span>
+        <span class="nombre">Introducción al Estudio de las Organizaciones</span>
+      </div>
+
+      <div class="materia" id="metodologia-investigacion" data-creditos="6" data-correlativas="epistemologia">
+        <span class="codigo">8</span>
+        <span class="nombre">Metodología de la Investigación</span>
+      </div>
+
+      <div class="materia" id="historia-educacion-moderna" data-creditos="6" data-correlativas="historia-general">
+        <span class="codigo">9</span>
+        <span class="nombre">Historia de la Educación Moderna y Contemporánea</span>
+      </div>
+    </div>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre IV</h4>
+
+      <div class="materia" id="intro-psicologia" data-creditos="4" data-correlativas="">
+        <span class="codigo">10</span>
+        <span class="nombre">Introducción a la Psicología</span>
+      </div>
+
+      <div class="materia" id="economia" data-creditos="4" data-correlativas="">
+        <span class="codigo">11</span>
+        <span class="nombre">Elementos de Economía</span>
+      </div>
+
+      <div class="materia" id="historia-educacion-arg" data-creditos="6" data-correlativas="historia-educacion-moderna">
+        <span class="codigo">12</span>
+        <span class="nombre">Historia de la Educación en Argentina y América Latina</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AÑO 3 ================= -->
+  <section class="anio">
+    <h3>Año 3</h3>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre V</h4>
+
+      <div class="materia" id="filosofia-educacion" data-creditos="4" data-correlativas="intro-filosofia">
+        <span class="codigo">13</span>
+        <span class="nombre">Filosofía de la Educación</span>
+      </div>
+
+      <div class="materia" id="sociologia-educacion" data-creditos="8" data-correlativas="intro-politica">
+        <span class="codigo">14</span>
+        <span class="nombre">Sociología de la Educación</span>
+      </div>
+
+      <div class="materia" id="psicologia-desarrollo" data-creditos="4" data-correlativas="intro-psicologia">
+        <span class="codigo">15</span>
+        <span class="nombre">Psicología del Desarrollo</span>
+      </div>
+
+      <div class="materia optativa" id="optativa-1" data-creditos="4" data-correlativas="">
+        <span class="codigo">O1</span>
+        <span class="nombre">Optativa I</span>
+      </div>
+    </div>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre VI</h4>
+
+      <div class="materia" id="psicologia-educacion" data-creditos="8" data-correlativas="psicologia-desarrollo">
+        <span class="codigo">16</span>
+        <span class="nombre">Psicología de la Educación</span>
+      </div>
+
+      <div class="materia" id="curriculo" data-creditos="4" data-correlativas="pedagogia-1 sociologia-educacion">
+        <span class="codigo">17</span>
+        <span class="nombre">Currículo</span>
+      </div>
+
+      <div class="materia" id="politica-legislacion" data-creditos="4" data-correlativas="intro-politica historia-educacion-arg">
+        <span class="codigo">18</span>
+        <span class="nombre">Política y Legislación de la Educación</span>
+      </div>
+
+      <div class="materia" id="pedagogia-2" data-creditos="4" data-correlativas="pedagogia-1">
+        <span class="codigo">19</span>
+        <span class="nombre">Pedagogía II</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AÑO 4 ================= -->
+  <section class="anio">
+    <h3>Año 4</h3>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre VII</h4>
+
+      <div class="materia" id="didactica-1" data-creditos="4" data-correlativas="curriculo">
+        <span class="codigo">20</span>
+        <span class="nombre">Didáctica I</span>
+      </div>
+
+      <div class="materia" id="investigacion-educativa" data-creditos="8" data-correlativas="metodologia-investigacion">
+        <span class="codigo">21</span>
+        <span class="nombre">Investigación Educativa</span>
+      </div>
+
+      <div class="materia" id="administracion-gestion" data-creditos="4" data-correlativas="organizaciones curriculo">
+        <span class="codigo">22</span>
+        <span class="nombre">Administración y Gestión de la Educación</span>
+      </div>
+
+      <div class="materia optativa" id="optativa-2" data-creditos="4" data-correlativas="">
+        <span class="codigo">O2</span>
+        <span class="nombre">Optativa II</span>
+      </div>
+    </div>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre VIII</h4>
+
+      <div class="materia" id="economia-financiamiento" data-creditos="4" data-correlativas="economia historia-educacion-moderna">
+        <span class="codigo">23</span>
+        <span class="nombre">Economía y Financiamiento de la Educación</span>
+      </div>
+
+      <div class="materia" id="didactica-2" data-creditos="8" data-correlativas="didactica-1">
+        <span class="codigo">24</span>
+        <span class="nombre">Didáctica II</span>
+      </div>
+
+      <div class="materia" id="educacion-tic" data-creditos="4" data-correlativas="didactica-1">
+        <span class="codigo">25</span>
+        <span class="nombre">Educación y TIC</span>
+      </div>
+
+      <div class="materia" id="educacion-comparada" data-creditos="4" data-correlativas="curriculo historia-educacion-moderna">
+        <span class="codigo">26</span>
+        <span class="nombre">Educación Comparada</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AÑO 5 ================= -->
+  <section class="anio">
+    <h3>Año 5</h3>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre IX</h4>
+      <small>Tesina – Fin de la Licenciatura</small>
+
+      <div class="materia" id="formacion-capacitacion" data-creditos="4" data-correlativas="sociologia-educacion">
+        <span class="codigo">27</span>
+        <span class="nombre">Formación y Capacitación</span>
+      </div>
+
+      <div class="materia optativa" id="optativa-3" data-creditos="4" data-correlativas="">
+        <span class="codigo">O3</span>
+        <span class="nombre">Optativa III</span>
+      </div>
+
+      <div class="materia" id="seminario-tesina" data-creditos="4" data-correlativas="investigacion-educativa">
+        <span class="codigo">28</span>
+        <span class="nombre">Seminario de Tesina</span>
+      </div>
+
+      <div class="materia" id="analisis-institucional" data-creditos="8" data-correlativas="administracion-gestion intro-politica">
+        <span class="codigo">29</span>
+        <span class="nombre">Análisis Institucional</span>
+      </div>
+
+      <div class="materia extra" id="tutoria-tesina" data-creditos="0" data-correlativas="seminario-tesina">
+        <span class="codigo">E1</span>
+        <span class="nombre">Tutoría y Escritura de la Tesina</span>
+      </div>
+    </div>
+
+    <div class="cuatrimestre">
+      <h4>Cuatrimestre X</h4>
+      <small>Tramo Pedagógico – Profesorado</small>
+
+      <div class="materia" id="didactica-3" data-creditos="4" data-correlativas="didactica-2">
+        <span class="codigo">30</span>
+        <span class="nombre">Didáctica III</span>
+      </div>
+
+      <div class="materia" id="practica-docente" data-creditos="8" data-correlativas="filosofia-educacion pedagogia-2 didactica-3 educacion-tic">
+        <span class="codigo">31</span>
+        <span class="nombre">Práctica Docente</span>
+      </div>
+
+      <div class="materia" id="formacion-docente" data-creditos="4" data-correlativas="politica-legislacion didactica-1 formacion-capacitacion">
+        <span class="codigo">32</span>
+        <span class="nombre">Formación Docente</span>
+      </div>
+
+      <div class="materia optativa" id="optativa-4" data-creditos="4" data-correlativas="">
+        <span class="codigo">O4</span>
+        <span class="nombre">Optativa IV</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IDIOMAS (COLUMNA LATERAL) ================= -->
+  <section class="anio idiomas">
+    <h3>Idiomas</h3>
+
+    <div class="cuatrimestre">
+      <div class="materia idioma" id="ingles-1" data-creditos="0" data-correlativas="">
+        <span class="codigo">I1</span>
+        <span class="nombre">Inglés Nivel I</span>
+      </div>
+
+      <div class="materia idioma" id="ingles-2" data-creditos="0" data-correlativas="ingles-1">
+        <span class="codigo">I2</span>
+        <span class="nombre">Inglés Nivel II</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
