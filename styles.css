@@ -1,0 +1,311 @@
+/**************************************************
+ RESET
+**************************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #0f1f17;
+  color: #e6f2ec;
+  padding: 20px;
+}
+
+/**************************************************
+ HEADER
+**************************************************/
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #9be3b4;
+}
+
+header h2 {
+  font-size: 1rem;
+  color: #b9e4c9;
+  margin-bottom: 12px;
+}
+
+.stats {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.stats div {
+  margin: 6px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #203b2e;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4bd18c, #1fa463);
+  transition: width 0.4s ease;
+}
+
+/**************************************************
+ CONTENEDOR GENERAL
+**************************************************/
+.contenedor-malla {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+/**************************************************
+ MALLA
+**************************************************/
+.malla {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+/**************************************************
+ AÑOS Y CUATRIMESTRES
+**************************************************/
+.anio {
+  min-width: 260px;
+  background: #13261d;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.anio h3 {
+  text-align: center;
+  color: #7ddfa4;
+  margin-bottom: 10px;
+}
+
+.cuatrimestre {
+  background: #183225;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.cuatrimestre h4 {
+  font-size: 0.95rem;
+  color: #a8e6c1;
+  margin-bottom: 4px;
+}
+
+.cuatrimestre small {
+  font-size: 0.75rem;
+  color: #7fcfa0;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/**************************************************
+ MATERIAS
+**************************************************/
+.materia {
+  position: relative;
+  background: #1f3d2e;
+  border-radius: 8px;
+  padding: 8px 36px 8px 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.materia:hover {
+  transform: translateY(-2px);
+}
+
+.materia .codigo {
+  font-size: 0.7rem;
+  color: #b5e7c7;
+}
+
+.materia .nombre {
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 2px;
+}
+
+/**************************************************
+ BADGE DE NOTA
+**************************************************/
+.nota-badge {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0f1f17;
+  color: #9be3b4;
+  border: 1px solid #4bd18c;
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/**************************************************
+ ESTADOS
+**************************************************/
+.materia.bloqueada {
+  background: #1b2f26;
+  color: #5f8a74;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.materia.disponible {
+  background: #2b6e4a;
+  border-color: #52c48a;
+}
+
+.materia.regular {
+  background: #4c8b3b;
+  border-color: #8ddf6a;
+}
+
+.materia.promocion,
+.materia.final {
+  background: #1fa463;
+  border-color: #74f0b3;
+  color: #052015;
+}
+
+/**************************************************
+ TIPOS
+**************************************************/
+.materia.optativa {
+  border-left: 4px solid #6be3b0;
+}
+
+.materia.extra {
+  border-left: 4px dashed #8ef5c8;
+  font-style: italic;
+}
+
+.materia.idioma {
+  background: #244a39;
+}
+
+/**************************************************
+ IDIOMAS (ARRIBA DERECHA)
+**************************************************/
+.idiomas {
+  min-width: 220px;
+  background: #13261d;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.idiomas h3 {
+  text-align: center;
+  color: #9be3b4;
+  margin-bottom: 10px;
+}
+
+/**************************************************
+ MODALES
+**************************************************/
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #13261d;
+  border-radius: 14px;
+  padding: 18px;
+  min-width: 260px;
+  z-index: 1001;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.modal h3 {
+  text-align: center;
+  color: #9be3b4;
+  margin-bottom: 12px;
+}
+
+.modal button {
+  width: 100%;
+  background: #1f3d2e;
+  color: #e6f2ec;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.modal button:hover {
+  background: #2f6f4c;
+}
+
+.modal button.danger {
+  background: #6a2e2e;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+  background: #1f3d2e;
+  color: #e6f2ec;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/**************************************************
+ RESPONSIVE
+**************************************************/
+@media (max-width: 1000px) {
+  .contenedor-malla {
+    flex-direction: column;
+  }
+
+  .idiomas {
+    order: -1;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+}
